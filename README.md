@@ -1,7 +1,13 @@
 # Persian-DatePicker
 jQuery UI Datepicker with bootstrap theme (Persian Shamsi, Arabic, Gregorian Calendar Support)
 
-for more info visit
-http://1saeedsalehi.github.io/Persian-DatePicker
+Added new features:
+-custom holidays.
+-add event for select multi calender via select option.
+-custom css style.
 
-i am open for any suggestion :)
+For more info:
+
+My github repo: github.com/nooshinzabihi
+My linkedin acc: linkedin.com/in/nooshinzabihi
+

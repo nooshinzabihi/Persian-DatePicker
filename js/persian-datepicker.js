@@ -1547,7 +1547,7 @@
           var thead = (showWeek ? '<th class="ui-datepicker-week-col">' + this._get(inst, "weekHeader") + "</th>" : "");
           for (var dow = 0; dow < 7; dow++) {
             var day = (dow + firstDay) % 7;
-            thead += "<th" + ((dow + firstDay + 6) % 7 >= 5 ? ' class="ui-datepicker-week-end"' : "") + '><span title="' + dayNames[day] + '">' + dayNamesMin[day] + "</span></th>"
+            thead += "<th" + ((dow + firstDay + 6) % 7 >= 5 ? ' class="ui-datepicker-week-end"' : "") + '><span title="' + dayNames[day] + '">' + dayNames[day] + "</span></th>"
           }
           calender += thead + "</tr></thead><tbody>";
           var daysInMonth = this._getDaysInMonth(drawYear, drawMonth);
@@ -1593,6 +1593,7 @@
       var html = '<div class="ui-datepicker-title">';
       var monthHtml = "";
       if (secondary || !changeMonth) {
+        
         monthHtml += '<span class="ui-datepicker-month">' + monthNames[drawMonth] + "</span>"
       } else {
         var inMinYear = (minDate && minDate.getFullYear() == drawYear);
@@ -2014,8 +2015,8 @@ jQuery(function(a) {
   a.datepicker.regional.fa = {
     calendar: JalaliDate,
     closeText: "بستن",
-    prevText: "قبل",
-    nextText: "بعد",
+    prevText: "ماه قبل",
+    nextText: "ماه بعد",
     currentText: "امروز",
     monthNames: ["فروردين", "ارديبهشت", "خرداد", "تير", "مرداد", "شهريور", "مهر", "آبان", "آذر", "دي", "بهمن", "اسفند"],
     monthNamesShort: ["فروردين", "ارديبهشت", "خرداد", "تير", "مرداد", "شهريور", "مهر", "آبان", "آذر", "دي", "بهمن", "اسفند"],

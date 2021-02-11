@@ -1,3 +1,14 @@
+@font-face {
+	font-family: iranSans;
+	src: url(./fonts/Vazir-Regular-FD-UI.woff);
+	
+  }
+  *{
+	  font-family: iranSans;
+  }
+  #ali-left-cl{
+	  width: 20%;
+  }
 /*!
  * jQuery UI Bootstrap (1.0 alpha)
  * http://addyosmani.github.io/jquery-ui-bootstrap/
@@ -235,7 +246,7 @@
 ----------------------------------*/
 
 .ui-widget {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: iranSans;
 	font-size: 13px;
 }
 
@@ -247,7 +258,7 @@
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: iranSans;
 	font-size: inherit;
 }
 
@@ -294,7 +305,7 @@
 .ui-state-focus,
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
-	color: #333333;
+	color: #333333 !important;
     background-color: #ebebeb;
     border-color: #adadad;
 	text-decoration: none;
@@ -612,9 +623,9 @@
 .ui-icon-circle-plus { background-position: 0 -192px; }
 .ui-icon-circle-minus { background-position: -16px -192px; }
 .ui-icon-circle-close { background-position: -32px -192px; }
-.ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.ui-icon-circle-triangle-e { background-position: -32px -16px; }
 .ui-icon-circle-triangle-s { background-position: -64px -192px; }
-.ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.ui-icon-circle-triangle-w { background-position:  -96px -16px; }
 .ui-icon-circle-triangle-n { background-position: -96px -192px; }
 .ui-icon-circle-arrow-e { background-position: -112px -192px; }
 .ui-icon-circle-arrow-s { background-position: -128px -192px; }
@@ -1888,12 +1899,13 @@ body .ui-tooltip {
 	padding: 4px 0;
 	background-color: #f5f5f5;
 	color: #808080;
+	
 }
 
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
 	position: absolute;
-	top: 2px;
+	top: .5rem;
 	width: 1.8em;
 	height: 1.8em;
 }
@@ -1901,6 +1913,7 @@ body .ui-tooltip {
 .ui-datepicker .ui-datepicker-prev-hover,
 .ui-datepicker .ui-datepicker-next-hover {
 	/*top: 1px;*/
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .ui-datepicker .ui-datepicker-prev {
@@ -1933,6 +1946,9 @@ body .ui-tooltip {
 	margin: 0 2.3em;
 	line-height: 1.8em;
 	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content:space-around;
 }
 
 .ui-datepicker .ui-datepicker-title select {
@@ -1946,7 +1962,11 @@ body .ui-tooltip {
 
 .ui-datepicker select.ui-datepicker-month,
 .ui-datepicker select.ui-datepicker-year {
-	width: 49%;
+	
+	width: 29%;
+	height: 2rem;
+	padding: .1rem;
+	border-radius: .25em;
 }
 
 .ui-datepicker table {
@@ -2119,10 +2139,12 @@ body .ui-tooltip {
 
 }
 .ui-datepicker-today a {
-	background-color: #BFBFBF;
+	border: 2px solid rgba(20, 175, 20, 0.644) !important;
+	/* border-radius: .25em; */
 	cursor: pointer;
 	padding: 0 4px;
 	margin-bottom: 0;
+	color: #808080 !important;
 }
 
 .ui-datepicker td a {
@@ -2474,7 +2496,7 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
 	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.25); /* Firefox 3.6 */
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.25);
 	color: rgba(255, 255, 255, 0.75);
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: iranSans;
 	line-height: 1;
 	margin: 5px 10px 0 10px;
 	padding: 4px 9px;
@@ -2549,3 +2571,99 @@ div.wijmo-wijmenu .wijmo-wijmenu-child .wijmo-wijmenu-text {
 .ui-button-text-icon-primary .ui-button-icon-primary{
     float:none;
 }*/
+td{
+	border: 1px solid #f9f9f9 !important;
+	border-collapse: collapse;
+}
+.ui-datepicker-other-month{
+	border: none !important;
+}
+
+
+/* custom */
+*
+        {
+            
+			padding:0;
+			margin:0;
+			border:0;
+        }
+        body
+        {
+			background-color: #0972a5;
+            direction: rtl;
+            font-size: 80%;
+        }
+        p
+        {
+            padding: 25px;
+            margin: 25px auto;
+            width: 450px;
+        }
+		p.ui-state-hover
+		{
+			font-weight: normal;
+		}
+        p.ui-widget-header
+        {
+            text-align: center;
+            font-weight: normal;
+        }
+        strong.ui-state-error
+        {
+            display: block;
+            padding: 3px;
+            text-align: center;
+		}
+		#datepicker-show{
+			direction: ltr;
+		}
+		.ui-datepicker{
+			width:auto;
+			margin-top:20px;
+		}
+		.ui-state-disabled span.ui-state-default{
+			background-color: #fdefee!important;
+			color:#ff0000;
+            border-radius: 5px;
+		}
+		.ui-datepicker-current-day a{
+			background-color: rgba(20, 175, 20, 0.644)!important;
+            color: #fdefee !important;
+		}
+		.ui-state-disabled, .ui-widget-content .ui-state-disabled{
+			opacity: .6;
+		}
+		.custom-disable{
+			background-color: skyblue;
+		}
+		.ui-datepicker-other-month{
+			background-color: #fff;
+		}
+		.ui-state-default{
+			background-color: #fff!important;
+		}
+		.ui-state-disabled.undefined span.ui-state-default{
+			background-color: skyblue!important;
+            border-radius: 5px;
+            color: #0972a5;
+        }
+        .grid-container{
+            width: 100%;
+            display: inline-flex;
+            /* flex-direction: row; */
+            flex-flow: row;
+            justify-items: center;
+            /* align-items: center;  */
+            padding: .25rem;
+        }
+        .grid-container > div {
+  background-color: rgb(255, 255, 255);
+  text-align: justify;
+  
+}
+        
+        /* headere qazias */
+        .ui-datepicker-header{
+            background-color: #EF6C00 !important;
+        }
